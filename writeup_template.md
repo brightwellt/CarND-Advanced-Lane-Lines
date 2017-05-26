@@ -24,8 +24,8 @@ The goals / steps of this project are the following:
 [image3]: ./report/image3_threshold.PNG "Binary Example"
 [image4]: ./report/image4_warped.PNG "Warp Example"
 [image5]: ./report/image5_polynomial.PNG "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
-[video1]: ./project_video.mp4 "Video"
+[image6]: ./report/image6_lane.PNG.jpg "Output"
+[video1]: ./report/project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -134,7 +134,7 @@ For vehicle position, we convert from pixels to m. I take the centre of the imag
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented at the end of the "add_histo" function.  Here is an example of my result on a test image:
+I implemented this at the end of the "add_histo" function.  Here is an example of my result on a test image:
 
 ![alt text][image6]
 
@@ -144,7 +144,7 @@ I implemented at the end of the "add_histo" function.  Here is an example of my 
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](.report/project_video.mp4)
 
 ---
 
