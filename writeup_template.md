@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./report/image1_undistort_output.PNG "Undistorted"
-[image2]: ./report/image2_undistory_demo.PNG "Road Transformed"
+[image2]: ./report/image2_undistort_demo.PNG "Road Transformed"
 [image3]: ./report/image3_threshold.PNG "Binary Example"
 [image4]: ./report/image4_warped.PNG "Warp Example"
 [image5]: ./report/image5_polynomial.PNG "Fit Visual"
