@@ -73,8 +73,8 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding in the "apply_thresholds" function, and combining channels in "combine_channels" - both located in cell 1. Several cells also contain demonstrations of how these functions work.
 Specifically I do
-- a sobel threshold on the x gradient
-- separate out H, L, S
+- a sobel threshold on the x gradient.
+- separate out H, L, S.
 - apply thresholds to L and S.
 - combine the images into a binary image.
 Here's an example of my output for this step. 
@@ -118,12 +118,12 @@ This cell also contains the vertices used to fit a region of interest to the war
 Cell 7 contains the full_pipeline function used to take a raw image, and return an image with lane lines on it.
 
 The second function in this Cell, "add_histo" does the following to fit lane lines with a 2nd order polynomial:
-- takes a histogram of the lower half of the image
-- finds the peaks of each half of the histogram to use as starting points for each line
-- For each line, it creates a series of windows around the starting point, going bottom to top 
-- 9 windows will be created vertically across the image for each line
-- I'll search each window for nonzero pixels
-- if we find enough pixels in the window, we'll recenter the next window on the mean of the non-zero pixels in this window
+- takes a histogram of the lower half of the image.
+- finds the peaks of each half of the histogram to use as starting points for each line.
+- For each line, it creates a series of windows around the starting point, going bottom to top .
+- 9 windows will be created vertically across the image for each line.
+- I'll search each window for nonzero pixels.
+- if we find enough pixels in the window, we'll recenter the next window on the mean of the non-zero pixels in this window.
 - I'll fit a 2nd order polynomial for each line based on the pixels we found.
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
@@ -170,5 +170,5 @@ In particular, the approach outlined in this writeup focuses on a simple approac
 Going further, I would start adding checks over successive video frames. I have left some of this in the sample code in the lower cells. The intent going forward is that 
 - I would check that successive lanes have similar curvature, are parallel, and similar positions in each frame. 
 - Bad frames would be rejected, and previous data would be used.
-- data would be smoothed over successive frames
+- Data would be smoothed over successive frames.
 - I could look ahead, and use the previous lane positions as a starting point for searching for the next lane.
