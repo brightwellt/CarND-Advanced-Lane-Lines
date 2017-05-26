@@ -44,6 +44,12 @@ All code referenced by this writeup is contained within the notebook, Project4-A
 located here
 https://github.com/brightwellt/CarND-Advanced-Lane-Lines/blob/master/Project4-AdvancedLaneLines-Final.ipynb
 
+The repository can be found here.
+https://github.com/brightwellt/CarND-Advanced-Lane-Lines
+
+The images in this writeup are in the report folder.
+Some additional images are in the output_images folder.
+
 ### Camera Calibration
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
@@ -138,6 +144,7 @@ I implemented this at the end of the "add_histo" function.  Here is an example o
 
 ![alt text][image6]
 
+Additional lane images can be found in the output_images/lanes folder as per the project rubric
 ---
 
 ### Pipeline (video)
