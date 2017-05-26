@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [image2]: ./report/image2_undistory_demo.PNG "Road Transformed"
 [image3]: ./report/image3_threshold.PNG "Binary Example"
 [image4]: ./report/image4_warped.PNG "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
+[image5]: ./report/image5_polynomial.PNG "Fit Visual"
 [image6]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
@@ -116,21 +116,25 @@ The second function in this Cell, "add_histo" does the following to fit lane lin
 - finds the peaks of each half of the histogram to use as starting points for each line
 - For each line, it creates a series of windows around the starting point, going bottom to top 
 - 9 windows will be created vertically across the image for each line
-- we'll search each window for nonzero pixels
+- I'll search each window for nonzero pixels
 - if we find enough pixels in the window, we'll recenter the next window on the mean of the non-zero pixels in this window
-- we'll fit a 2nd order polynomial for each line based on the pixels we found.
+- I'll fit a 2nd order polynomial for each line based on the pixels we found.
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
 ![alt text][image5]
 
+White pixels show pixels excluded by the search. The red pixels are those identified for the left lane; the blue pixels for the right lane. The two polynomials are drawn on top in yellow. Note that when generating this image I briefly disabled the region of interest code - I wasn't getting left with any white pixels!
+
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+The add_histo function scales the fitted polynomials and image dimensions from pixels to metres. The equation used and code this is based upon are taken from the "Measuring Curvature" section of this part of the course.
+
+For vehicle position, we convert from pixels to m. I take the centre of the image as the midpoint of the vehicle. I determine how far this is from the edges of the lanes, and can work out how far from the centre of the lane we are. 
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+I implemented at the end of the "add_histo" function.  Here is an example of my result on a test image:
 
 ![alt text][image6]
 
