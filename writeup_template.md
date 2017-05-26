@@ -105,7 +105,20 @@ I verified that my perspective transform was working as expected by drawing the 
 
 ![alt text][image4]
 
+This cell also contains the vertices used to fit a region of interest to the warped image and remove extraneous data from the edges and middle. The region_of_interest function used to apply the vertices to the image is in cell 1.
+
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
+
+Cell 7 contains the full_pipeline function used to take a raw image, and return an image with lane lines on it.
+
+The second function in this Cell, "add_histo" does the following to fit lane lines with a 2nd order polynomial:
+- takes a histogram of the lower half of the image
+- finds the peaks of each half of the histogram to use as starting points for each line
+- For each line, it creates a series of windows around the starting point, going bottom to top 
+- 9 windows will be created vertically across the image for each line
+- we'll search each window for nonzero pixels
+- if we find enough pixels in the window, we'll recenter the next window on the mean of the non-zero pixels in this window
+- we'll fit a 2nd order polynomial for each line based on the pixels we found.
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
