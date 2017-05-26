@@ -40,9 +40,9 @@ The goals / steps of this project are the following:
 You're reading it!
 
 ### Code
-All code referenced by this writeup is contained within the notebook, Project4-AdvancedLaneLines-Final.ipynb
+All code referenced by this writeup is contained within the notebook, Project4-AdvancedLaneLines.ipynb
 located here
-https://github.com/brightwellt/CarND-Advanced-Lane-Lines/blob/master/Project4-AdvancedLaneLines-Final.ipynb
+https://github.com/brightwellt/CarND-Advanced-Lane-Lines/blob/master/Project4-AdvancedLaneLines.ipynb
 
 The repository can be found here.
 https://github.com/brightwellt/CarND-Advanced-Lane-Lines
