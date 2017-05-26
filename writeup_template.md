@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 [image3]: ./report/image3_threshold.PNG "Binary Example"
 [image4]: ./report/image4_warped.PNG "Warp Example"
 [image5]: ./report/image5_polynomial.PNG "Fit Visual"
-[image6]: ./report/image6_lane.PNG.jpg "Output"
+[image6]: ./report/image6_lane.PNG "Output"
 [video1]: ./report/project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -153,3 +153,15 @@ Here's a [link to my video result](.report/project_video.mp4)
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+
+Throughout the course I kept track of the code examples, adding them to a workbook to draw from for this project. As well as the course notes, I looked on the forums, and read a number of articles. I picked up a couple of suggestions which I tried from there.
+The use of luminance to help with shadows on yellow lines was handy.
+I also added a video processor class to help with iterating over successive video frames. However this is simpler than a full fledged project would require.
+
+In particular, the approach outlined in this writeup focuses on a simple approach to the first project video. It is not as robust as some of the other approaches I have been taking. One example of where it might fail is in the image search area. We are assuming a car positioned centrally in a lane, with clear markings, slow turns etc. Elements such as the region of interest would have to be dropped or amended for a more complex approach.
+
+Going further, I would start adding checks over successive video frames. I have left some of this in the sample code in the lower cells. The intent going forward is that 
+- I would check that successive lanes have similar curvature, are parallel, and similar positions in each frame. 
+- Bad frames would be rejected, and previous data would be used.
+- data would be smoothed over successive frames
+- I could look ahead, and use the previous lane positions as a starting point for searching for the next lane.
