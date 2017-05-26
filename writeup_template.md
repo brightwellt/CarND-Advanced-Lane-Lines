@@ -144,7 +144,7 @@ I implemented this at the end of the "add_histo" function.  Here is an example o
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](.report/project_video.mp4)
+Here's a [link to my video result](report/project_video.mp4)
 
 ---
 
